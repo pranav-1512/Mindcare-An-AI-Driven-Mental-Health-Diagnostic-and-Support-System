@@ -1,0 +1,250 @@
+/* NearbyDoctorsPage.css */
+.doctors-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+  }
+  
+  .doctors-header {
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+    color: white;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .doctors-header h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .back-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+  
+  .back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .location-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    flex: 1;
+  }
+  
+  .get-location-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .get-location-content h2 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .get-location-content p {
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .find-location-btn {
+    background-color: #4CA1AF;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(76, 161, 175, 0.3);
+  }
+  
+  .find-location-btn:hover {
+    background-color: #2C3E50;
+    transform: translateY(-2px);
+  }
+  
+  .find-location-btn:disabled {
+    background-color: #b3b3b3;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .error-message {
+    color: #e53935;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .loading-location,
+  .loading-doctors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .loading-location .spinner,
+  .loading-doctors .spinner {
+    margin-bottom: 1rem;
+  }
+  
+  .doctors-results {
+    padding: 1rem 0 3rem;
+  }
+  
+  .doctors-results h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .results-count {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .doctors-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .doctor-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doctor-specialty-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #4CA1AF;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+  }
+  
+  .doctor-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    padding-right: 80px;
+    color: #333;
+  }
+  
+  .doctor-detail {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .doctor-icon {
+    color: #4CA1AF;
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+  }
+  
+  .doctor-detail p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .doctor-phone-btn,
+  .doctor-directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #fff;
+    color: #4CA1AF;
+    border: 1px solid #4CA1AF;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-right: 0.8rem;
+    margin-top: 0.5rem;
+    transition: all 0.3s;
+  }
+  
+  .doctor-phone-btn {
+    background-color: #4CA1AF;
+    color: white;
+  }
+  
+  .doctor-phone-btn:hover {
+    background-color: #3a8994;
+  }
+  
+  .doctor-directions-btn:hover {
+    background-color: #f0f8ff;
+  }
+  
+  .doctors-footer {
+    background-color: #2C3E50;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+  }
+  
+  .doctors-footer p {
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .doctors-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .doctors-header h1 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .location-container {
+      padding: 0 1rem;
+      margin: 1rem auto;
+    }
+    
+    .get-location-card {
+      padding: 2rem 1rem;
+    }
+  }
